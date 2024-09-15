@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(190deg); /* Example filter to change color */
+  }
+}
+@layer utilities {
+  .custom-btn {
+    @apply cursor-pointer bg-button-blue-color rounded-[10px] text-white px-[20px] py-[10px];
+  }
+}
+body {
+  background-color: #f7f7f7;
+  /* font-family: "Poppins", sans-serif; */
+
+    font-family: var(--font-poppins);
+ 
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: #04aa6d;
+  margin-left: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+th {
+  /* background-color: #0683c6; */
+  color: #121f47;
+}
+
+iframe html body {
+  
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+  height: 100%;
+  overflow-x: hidden;
+}
+ img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+iframe img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* In your CSS file or in a style block */
+.chart-canvas {
+  height: 284px; /* Default height */
+  width: 100%; /* Default width */
+}
+
+@media (min-width: 1024px) {
+  .chart-canvas {
+    height: auto; /* Reset height on large screens */
+    width: auto; /* Reset width on large screens */
+  }
+}
