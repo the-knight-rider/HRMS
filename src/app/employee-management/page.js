@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import DropdownBox from "../Components/dropdownBox";
-import DropdownCheckBox from "@/app/Components/dropdownCheckbox";
+import DropdownCheckBox from "@/app/Components/dropDownCheckbox";
 import FetchData from "./fetchData";
 import Table from "../Components/Table";
 import Link from "next/link";
 import AddEmployee from "../Components/AddEmployee";
-import DropdownInput from "@/app/Components/dropdownInput";
+import DropdownInput from "@/app/Components/dropDownInput";
 import { IoSearch } from "react-icons/io5";
 
 export default function EmployeeManagement() {
