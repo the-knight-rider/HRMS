@@ -2,37 +2,37 @@ export const PoliciesData = [
     {
         id:1,
         name: "Exit Policy",
-        path: '/Exit_Policy.pdf'
+        // path: '/Exit_Policy.pdf'
     },
     {
         id:1,
         name: "Referral Policy",
-        path: '/Referral Policy.pdf'
+        // path: '/Referral Policy.pdf'
     },
     {
         id:2,
         name: "No Gossip Policy",
-        path: '/No Gossip Policy.pdf'
+        // path: '/No Gossip Policy.pdf'
     },
     {
         id:3,
         name: "IT and Asset Policy",
-        path: '/IT & Asset Policy.pdf'
+        // path: '/IT & Asset Policy.pdf'
     },
     {
         id:4,
         name: "Annual Leave Policy",
-        path: '/Annual Leave Policy.pdf'
+        // path: '/Annual Leave Policy.pdf'
     },
     {
         id:5,
         name: "Learning and Development Policy",
-        path: '/Learning and Developement Policy.pdf'
+        // path: '/Learning and Developement Policy.pdf'
     },
     {
         id:6,
         name: "Performance Improvement Policy",
-        path: '/Performance Improvement Policy.pdf'
+        // path: '/Performance Improvement Policy.pdf'
     },
     {
         id:7,
