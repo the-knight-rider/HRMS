@@ -14,7 +14,7 @@ import { CiEdit } from "react-icons/ci";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { authTable, firestoreDB } from "@/app/utils/firebase";
 import { doc, updateDoc } from "firebase/firestore";
-import {useRouter} from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import EditProfile from "../Components/EditProfile";
 import fetchProfileData from "../Components/fetchProfileData";
 import ProfileContext, { ProfileContextProvider } from "../Context/profileContext";
@@ -53,16 +53,16 @@ export default function ProfileLayout({ children }) {
   const [editImage, setEditImage] = useState(false);
   const [updatedImage, setUpdatedImage] = useState("/img1.jpeg");
   const user = useUser();
-  const {userData} = user;
+  const { userData } = user;
   // const {docuId} = user;
-  console.log("profile",userData);
-  
+  console.log("profile", userData);
+
 
   // console.log(docuId);
-  
- 
+
+
   const hiddenFileInput = useRef(null);
- 
+
   const handleChange = (event) => {
     if (event.target.files) {
       console.log(event.target.files[0]);
@@ -78,7 +78,7 @@ export default function ProfileLayout({ children }) {
     }
   };
 
-  const updateName=async ()=>{
+  const updateName = async () => {
     setEditing(false)
     // const userQuery = query(collection(firestoreDB, "admin"), where("userId", "==", "PB27BveZJXhQul4D1dcqekXIlez2"));
     // const querySnapshot = await getDocs(userQuery);
@@ -88,12 +88,12 @@ export default function ProfileLayout({ children }) {
     // await updateDoc(doc(adminTable, "PB27BveZJXhQul4D1dcqekXIlez2"), {
     //   name: name
     // });
-   
+
 
 
 
   }
- 
+
   const handleImageUpdate = (event) => {
     hiddenFileInput.current.click();
   };
@@ -102,7 +102,7 @@ export default function ProfileLayout({ children }) {
   // },[])
   useEffect(() => {
     setData(userData);
-    
+
     // const userQuery = query(collection(firestoreDB, "admin"), where("userId", "==", "PB27BveZJXhQul4D1dcqekXIlez2"));
     // let data;
     // getDocs(userQuery).then((querySnapshot) => {
@@ -126,10 +126,10 @@ export default function ProfileLayout({ children }) {
     // }
     // fetchData();
     // // console.log('fbData',gotData);
-         // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  
- 
+
+
   return (
     <div className="flex flex-col h-full ml-12" >
       {/* box for the bg image */}
@@ -144,7 +144,7 @@ export default function ProfileLayout({ children }) {
           className="relative object-fill "
         />
       </div>
- 
+
       {/* box for the content */}
       <div className="">
         {/* box for the navigaiton & image */}
@@ -152,44 +152,44 @@ export default function ProfileLayout({ children }) {
           {/* profile image */}
           <div className="relative flex items-center justify-center lg:h-32 lg:w-32 md:h-24 md:w-24 h-16 w-16">
 
-          {/* Inner profile photo div */}
-          <div
-            className="rounded-full object-cover absolute     bg-white p-1 lg:h-32 lg:w-32 md:h-24 md:w-24 h-16 w-16 "
-            onMouseEnter={() => setEditImage(true)}
-            onMouseLeave={() => setEditImage(false)}
-          >
-            {/* <img className="rounded-full " src={updatedImage} /> */}
-            <Image
-              src={updatedImage}
-              alt="profile image"
-              width={128}
-              height={128}
-              className="rounded-full"
-            />
-            
- 
-            {/* Edit Icon for image */}
-            
-            {editImage ? (
-              <div className="rounded-full bg-black/40 flex justify-center items-center absolute inset-0 cursor-pointer text-white border-[4px] text-[25px] border-white transition-all duration-500 ease-in-out ">
-                <input
-                  type="file"
-                  accept="image/*"
-                  ref={hiddenFileInput}
-                  onChange={handleChange}
-                  style={{ display: "none" }}
-                />
-                <button onClick={handleImageUpdate} aria-label="file upload">
-                  <MdModeEditOutline />
-                </button>
-              </div>
-            ) : null}
+            {/* Inner profile photo div */}
+            <div
+              className="rounded-full object-cover absolute     bg-white p-1 lg:h-32 lg:w-32 md:h-24 md:w-24 h-16 w-16 "
+              onMouseEnter={() => setEditImage(true)}
+              onMouseLeave={() => setEditImage(false)}
+            >
+              {/* <img className="rounded-full " src={updatedImage} /> */}
+              <Image
+                src={updatedImage}
+                alt="profile image"
+                width={128}
+                height={128}
+                className="rounded-full"
+              />
+
+
+              {/* Edit Icon for image */}
+
+              {editImage ? (
+                <div className="rounded-full bg-black/40 flex justify-center items-center absolute inset-0 cursor-pointer text-white border-[4px] text-[25px] border-white transition-all duration-500 ease-in-out ">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    ref={hiddenFileInput}
+                    onChange={handleChange}
+                    style={{ display: "none" }}
+                  />
+                  <button onClick={handleImageUpdate} aria-label="file upload">
+                    <MdModeEditOutline />
+                  </button>
+                </div>
+              ) : null}
+            </div>
           </div>
-          </div>
- 
+
           {/* navigation tabs */}
           <div className="flex h-full ">
- 
+
             {/* link to personal section */}
             <span
               className={`
@@ -203,14 +203,14 @@ export default function ProfileLayout({ children }) {
                 hover:bg-gray-200 
                 hover:shadow-md
               `}
-              
+
             >
               <Link href="/my-profile/personal">PERSONAL</Link>
             </span>
- 
+
             {/* link to work section */}
             <span
-               className={`
+              className={`
                 ${routes === "/my-profile/work" ? "bg-white text-primary-blue" : "text-white"}
                 md:text-[14px] text-[12px] 
                 cursor-pointer 
@@ -225,38 +225,39 @@ export default function ProfileLayout({ children }) {
               <Link href="/my-profile/work">WORK</Link>
             </span>
           </div>
- 
+
           {/* log-off icon */}
-          <span onClick={()=>{logoutHandler()}} className="flex items-center justify-center cursor-pointer text-white">
-            
+          <span onClick={() => { logoutHandler() }} className="flex items-center justify-center cursor-pointer text-white">
+
             <Link href="/">
               <FaPowerOff />
             </Link>
           </span>
-          
+
         </div>
 
         {/* Opening Popup for Editing Profile */}
         <div className="absolute top-0 left-0 ">
 
-        {editProfile?
-          <>
-          <EditProfile editprofileModal={editProfile} setEditprofileModal={setEditProfile} />
-          </>
-          :
-          null
-        }
+          {editProfile ?
+            <>
+              <EditProfile editprofileModal={editProfile} setEditprofileModal={setEditProfile} />
+            </>
+            :
+            null
+          }
         </div>
-        
+
         {/* Edit button here */}
         <div className="w-full md:flex hidden  items-center justify-end lg:pr-10 md:pr-9 pr-5 mt-2">
-        <button onClick={()=>{setEditProfile(true);
-          
-          }          
+          <button onClick={() => {
+            setEditProfile(true);
+
+          }
           } className="flex items-center justify-center cursor-pointer text-white bg-button-blue-color md:px-[20px] px-[15px] md:py-[5px] py-[3px] rounded-[5px] ">
-            
-             Edit
-          
+
+            Edit
+
           </button>
         </div>
 
@@ -264,22 +265,22 @@ export default function ProfileLayout({ children }) {
         <div className="flex md:flex-row flex-col w-full mt-0">
           <div className="lg:w-1/4 md:w-1/3 w-full flex flex-col gap-3 p-5 ">
             <div className="flex flex-col px-3 ">
-            {/* Name */}
-            <div className="flex items-center md:justify-start justify-between gap-2">
-              
-              <div className="font-semibold text-[22px] text-dark-blue ">
-              {`${userData[0].firstName} ${userData[0].lastName}`}
+              {/* Name */}
+              <div className="flex items-center md:justify-start justify-between gap-2">
+
+                <div className="font-semibold text-[22px] text-dark-blue ">
+                  {`${userData[0].firstName} ${userData[0].lastName}`}
+                </div>
+
+                <div className="md:hidden block  border border-gray-400 hover:cursor-pointer px-[5px] py-[1px] rounded-[2px]  text-dark-blue ">
+                  <button onClick={() => { setEditProfile(true) }}    >
+                    <MdEdit />
+
+                  </button>
+                </div>
+
               </div>
 
-              <div className="md:hidden block  border border-gray-400 hover:cursor-pointer px-[5px] py-[1px] rounded-[2px]  text-dark-blue ">
-                <button onClick={()=>{setEditProfile(true)    }}    >
-                <MdEdit  />
-
-                </button>
-              </div>
-
-              </div>
-             
             </div>
 
             {/* Left Short Profile Section contains General Information */}
@@ -292,7 +293,7 @@ export default function ProfileLayout({ children }) {
                       <BsFillHandbagFill />
                     </div>
                     <div>
-                      <span className="text-dark-blue">{data1[0].Designation}</span> at Agumentik 
+                      <span className="text-dark-blue">{data1[0].Designation}</span> at Agumentik
                     </div>
                   </div>
                   {/* School/Institute Name */}
@@ -321,8 +322,8 @@ export default function ProfileLayout({ children }) {
                   </div>
                   {/* LinkedIn profile */}
                   <div className="flex flex-row items-center gap-[10px] text-grey-color w-full ">
-                  <div className="flex items-start ">
-                  <FaLinkedin />
+                    <div className="flex items-start ">
+                      <FaLinkedin />
                     </div>
                     <div className="flex flex-wrap"><Link href='https://www.linkedin.com/company/Agumentik /' className="text-dark-blue break-all leading-[1.1] hover:text-primary-blue ">{userData[0].linkedin}</Link></div>
                   </div>
@@ -334,7 +335,6 @@ export default function ProfileLayout({ children }) {
         </div>
       </div>
     </div>
-    
+
   );
 }
- 

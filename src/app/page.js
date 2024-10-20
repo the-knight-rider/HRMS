@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
     {userType === "admin"?
-    <DashboardLayout />
+    <EmployeeDashboardLayout />
     :
     <EmployeeDashboardLayout />
     
