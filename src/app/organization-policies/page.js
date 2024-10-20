@@ -92,7 +92,7 @@ const OrganizationPolicies = () => {
          <p className="text-primary-blue">Dashboard / Organization Policies</p> 
       </div> */}
       <Card >
-        <div className="w-full flex lg:flex-row md:flex-row flex-col md:gap-0 gap-2 justify-between lg:items-center md:items-center items-start ">
+        <div className="w-full flex lg:flex-row md:flex-row flex-col md:gap-0 gap-2 justify-around lg:items-center md:items-center items-start ">
           <div className="text-primary-blue md:text-[20px] text-[16px] font-medium ">
             Organizational Policies
           </div>
@@ -171,9 +171,9 @@ const OrganizationPolicies = () => {
         </div>
       </Card>
       {/* All Cards */}
-      <div className="flex flex-col gap-[10px] ">
+      <div className="flex flex-col gap-[10px] m-12">
         {PoliciesData.map((policy, index) => (
-          <div key={index} className="flex md:flex-row flex-col justify-between md:items-center items-start md:gap-0 gap-[10px] md:text-[16px] text-[18px]  px-[10px] py-[5px]  rounded-[10px] text-dark-blue font-medium hover:text-primary-blue transition-all ">
+          <div key={index} className="flex md:flex-row flex-col justify-between md:items-center items-start md:gap-0 gap-[10px] md:text-[16px] text-[18px]  px-[10px] py-[5px]  rounded-[10px] text-dark-blue font-medium hover:text-primary-blue transition-all ml-12 ">
             <div>{policy.name}</div>
             <div className="flex flex-row md:items-center items-stretch md:justify-center justify-between gap-[10px]  ">
               <button onClick={()=>handlePreview(policy.path)} className="bg-dark-blue px-[30px] py-[5px] text-white rounded-[10px] font-medium ">Preview</button>

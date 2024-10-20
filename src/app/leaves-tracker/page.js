@@ -113,7 +113,7 @@ export default function LeaveTracker() {
         {/* wecome line section */}
         <div className="flex flex-col gap-[13px]">
           <h2 className="text-[32px] font-medium text-dark-blue">
-            Good afternoon, Nitin!
+            Good afternoon, Aditya!
           </h2>
           <p className="text-grey-color font-semibold">
             You have <span className="text-dark-blue">2 request</span> pending.

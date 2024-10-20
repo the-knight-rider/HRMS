@@ -131,12 +131,12 @@ export default function ProfileLayout({ children }) {
   
  
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full ml-12" >
       {/* box for the bg image */}
       <div className="relative md:h-[175px] h-[120px] w-auto ">
-        {/* <img src="https://Agumentik -operations-dev-ed.my.site.com/empcommunity/s/sfsites/c/img/community/cpt/cpt-profile-banner.png" /> */}
+        {/* { <img src="https://media.licdn.com/dms/image/v2/D563DAQFdl27jfUVotg/image-scale_191_1128/image-scale_191_1128/0/1664183267459/agumentikgroup_cover?e=2147483647&v=beta&t=oZKVdF0SnMb1xcQ-wydEjcrBV7Y71xVsVwL46j9jsQ0" /> } */}
         <Image
-          src="https://Agumentik -operations-dev-ed.my.site.com/empcommunity/s/sfsites/c/img/community/cpt/cpt-profile-banner.png"
+          src="https://media.licdn.com/dms/image/v2/D563DAQFdl27jfUVotg/image-scale_191_1128/image-scale_191_1128/0/1664183267459/agumentikgroup_cover?e=2147483647&v=beta&t=oZKVdF0SnMb1xcQ-wydEjcrBV7Y71xVsVwL46j9jsQ0"
           alt="profile image"
           width={1920}
           height={400}
@@ -148,7 +148,7 @@ export default function ProfileLayout({ children }) {
       {/* box for the content */}
       <div className="">
         {/* box for the navigaiton & image */}
-        <div className="bg-secondary-blue flex justify-between items-center lg:h-12 md:h-10 h-8 relative lg:px-12 md:px-9 px-3 ">
+        <div className="bg-secondary-blue rounded-lg flex justify-between items-center lg:h-12 md:h-10 h-8 relative lg:px-12 md:px-9 px-3 ml-6 ">
           {/* profile image */}
           <div className="relative flex items-center justify-center lg:h-32 lg:w-32 md:h-24 md:w-24 h-16 w-16">
 
@@ -192,22 +192,35 @@ export default function ProfileLayout({ children }) {
  
             {/* link to personal section */}
             <span
-              className={`${
-                routes === "/my-profile/personal"
-                ? "bg-white text-primary-blue"
-                : "text-white"
-              } md:text-[14px] text-[12px] cursor-pointer flex items-center justify-center px-3 h-full `}
+              className={`
+                ${routes === "/my-profile/personal" ? "bg-white text-primary-blue" : "text-white"}
+                md:text-[14px] text-[12px] 
+                cursor-pointer 
+                flex items-center justify-center 
+                px-3 h-full 
+                rounded-lg 
+                transition-all duration-200 
+                hover:bg-gray-200 
+                hover:shadow-md
+              `}
+              
             >
               <Link href="/my-profile/personal">PERSONAL</Link>
             </span>
  
             {/* link to work section */}
             <span
-              className={`${
-                routes === "/my-profile/work"
-                  ? "bg-white text-primary-blue"
-                  : "text-white"
-              } md:text-[14px] text-[12px] cursor-pointer flex items-center justify-center px-3 h-full `}
+               className={`
+                ${routes === "/my-profile/work" ? "bg-white text-primary-blue" : "text-white"}
+                md:text-[14px] text-[12px] 
+                cursor-pointer 
+                flex items-center justify-center 
+                px-3 h-full 
+                rounded-lg 
+                transition-all duration-200 
+                hover:bg-gray-200 
+                hover:shadow-md
+              `}
             >
               <Link href="/my-profile/work">WORK</Link>
             </span>

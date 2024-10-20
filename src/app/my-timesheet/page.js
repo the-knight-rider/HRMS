@@ -281,7 +281,7 @@ const handleSorting = (sortField) => {
 
   return (
     <>
-      <div className="flex flex-col gap-[25px] p-[25px] ">
+      <div className="flex flex-col gap-[25px] p-[25px] ml-12 ">
         {/* Header Section */}
         <div className="flex flex-row justify-between items-center ">
           {/* Tiltle and Subtitle */}

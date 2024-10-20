@@ -68,7 +68,7 @@ const MyProfile = () => {
 
   return (
     <div className=" relative p-[0px] ">
-      <div className="bg-sky-color p-[20px] rounded-[10px] flex flex-col gap-[10px] h-full ">
+      <div className="bg-sky-color p-[20px] rounded-[10px] flex flex-col gap-[10px] h-full  ">
         {/* Upper Profile Section - Image, Name and Emial Id */}
         <div className="relative flex flex-row gap-[20px] px-[10px] py-[10px] ">
           {/* Profile Image */}

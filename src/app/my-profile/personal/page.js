@@ -20,9 +20,9 @@ export default  function Personal() {
   // // console.log("props Wala",data1);
 
   return (
-    <div className="flex font-poppins">
+    <div className="flex font-poppin ">
       {/* box for the right side */}
-      <div className="w-full gap-28">
+      <div className="w-full gap-28 ">
         {/* first row for the data */}
         <div className="w-full text-sm flex items-center lg:gap-32 md:gap-20 gap-10 p-8 py-5  border-b border-dashed border-gray-400">
           <span className="w-14">DOB:</span>

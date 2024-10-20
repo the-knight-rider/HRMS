@@ -84,7 +84,7 @@ const EmployeeTracker = () => {
 
   const defaultTableHeading = ["Name", "Designation", "Department", "Status"];
   return (
-    <div className="bg-sky-color w-full h-auto flex flex-col gap-5 p-[20px] rounded-b-[10px] ">
+    <div className="bg-sky-color w-full h-auto flex flex-col gap-5 p-[20px] rounded-b-[10px]  ">
       {/* Page Heading */}
       <div>
         <h1 className="text-dark-blue text-[24px] font-bold">

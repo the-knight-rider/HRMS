@@ -75,14 +75,14 @@ const EmployeeDashboard = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-[25px] ">
+      <div className="flex flex-col gap-[25px] ml-12 ">
         {/* First Row */}
         <div className="flex flex-row gap-[25px] w-full">
           {/* greeting card and announcement*/}
-          <div className=" flex flex-col w-[75%] gap-4 ">
+          <div className=" flex flex-col w-[75%] gap-4  ">
             {/* Greeting Section */}
-            <div className="w-full flex flex-row bg-white rounded-[15px]">
-              <div className="w-[20%] h-32">
+            <div className="w-full flex flex-row bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative">
+              <div className="w-[20%] h-32 ">
                 <Image
                   src="/work.jpg"
                   alt="work-pic"
@@ -106,7 +106,7 @@ const EmployeeDashboard = () => {
             </div>
 
             {/* Announcement Section */}
-            <div className="flex flex-col gap-0">
+            <div className="flex flex-col gap-0 bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative">
               <div className="bg-[#BFE9FF] p-2 flex flex-row gap-4 items-center rounded-tr-[10px] rounded-tl-[10px]">
                 <div className="h-6">
                   <Image
@@ -122,7 +122,7 @@ const EmployeeDashboard = () => {
                   What&apos;s Happening in Agumentik 
                 </div>
               </div>
-              <div className="bg-white flex flex-col px-2 rounded-br-[10px] rounded-bl-[10px]">
+              <div className="bg-white flex flex-col px-2 rounded-br-[10px] rounded-bl-[10px] ">
                 {/* First Announcement */}
                 <div className=" py-4 flex flex-row justify-between  items-center w-full">
                   <div className="flex flex-row  items-center gap-4 w-[85%]">
@@ -179,7 +179,7 @@ const EmployeeDashboard = () => {
           </div>
 
           {/* Punch In/Out Section */}
-          <div className="bg-white rounded-[15px] w-[25%] flex flex-col px-1 relative  ">
+          <div className=" w-[25%] flex flex-col px-1 relative bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50  ">
             {/* time circle */}
 
             <div
@@ -197,7 +197,7 @@ const EmployeeDashboard = () => {
             </div>
 
             {/* Punch IN/OUT Time Display Box */}
-            <div className=" flex flex-row gap-10 px-[15%] py-4 m-auto bg-[#f9f9f9] rounded-[15px] ">
+            <div className=" flex flex-row gap-10 px-[15%] py-4 m-auto bg-[#f4efef] rounded-[15px] border border-black ">
               <div className="flex flex-col gap-1 items-center ">
                 <div className="text-[#0683c6] font-medium text-[14px] ">
                   Punch In
@@ -228,11 +228,11 @@ const EmployeeDashboard = () => {
 
         {/* Second Row */}
         <div className="flex md:flex-row flex-col  gap-[25px]  ">
-          <div className="w-[75%] flex flex-row gap-[25px] bg-white rounded-[15px] ">
+          <div className="w-[75%] flex flex-row gap-[25px] bg-white rounded-[15px]bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative ">
             <MyForecasting />
           </div>
 
-          <div className="lg:w-[25%]  bg-white rounded-[15px] h-auto  flex flex-col  ">
+          <div className="lg:w-[25%]  bg-white rounded-[15px] h-auto  flex flex-col border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative ">
             <div className=" mt-3 text-dark-blue font-medium text-[22px] px-3   ">
               Leaves Update
             </div>
@@ -244,7 +244,7 @@ const EmployeeDashboard = () => {
         <div className="flex md:flex-row flex-col  gap-[25px]  ">
           <div className="w-[75%] flex flex-row gap-[25px] ">
             {/* New Joinings */}
-            <div className="w-[50%] flex flex-col gap-[10px]  bg-white rounded-[15px] h-auto pb-[10px] ">
+            <div className="w-[50%] flex flex-col gap-[10px]  bg-white rounded-[15px] h-auto pb-[10px] bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative ">
               <div className=" my-[12px] text-dark-blue font-medium text-[22px] px-3   ">
                 New Joining&apos;s
               </div>
@@ -292,8 +292,8 @@ const EmployeeDashboard = () => {
             </div>
 
             {/* Celebrations */}
-            <div className="w-[50%]  bg-white rounded-[15px] h-auto  flex flex-col gap-[10px] pb-2">
-              <div className=" my-[12px] text-dark-blue font-medium text-[22px] px-3">
+            <div className="w-[50%]  bg-white rounded-[15px] h-auto  flex flex-col gap-[10px] pb-2 bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative">
+              <div className=" my-[12px] text-dark-blue font-medium text-[22px] px-3 " >
                 Upcoming Celebration
               </div>
               <div className="flex flex-col gap-1 h-[332px] overflow-y-scroll scrollbar-hide  ">
@@ -336,7 +336,7 @@ const EmployeeDashboard = () => {
           </div>
 
           {/* Arrival Report */}
-          <div className="lg:w-[25%]  bg-white rounded-[15px] h-auto  flex flex-col pb-2">
+          <div className="lg:w-[25%]  bg-white rounded-[15px] h-auto  flex flex-col pb-2 bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative">
             <div className=" mt-3 text-dark-blue font-medium text-[22px] px-3   ">
               Arrival Report
             </div>
@@ -350,7 +350,7 @@ const EmployeeDashboard = () => {
         <div className="flex md:flex-row flex-col  gap-[25px]  ">
           <div className="w-[75%] flex flex-row gap-[25px] ">
             {/* Timesheet Report */}
-            <div className="lg:w-[50%]  bg-white rounded-[15px] h-auto  flex flex-col pb-2">
+            <div className="lg:w-[50%]  bg-white rounded-[15px] h-auto  flex flex-col pb-2 bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative">
               <div className=" mt-3 text-dark-blue font-medium text-[22px] px-3   ">
                 Timesheet Report
               </div>
@@ -362,7 +362,7 @@ const EmployeeDashboard = () => {
             </div>
 
             {/* Statistics Section */}
-            <div className="bg-white w-[50%] rounded-[15px] px-4 flex flex-col gap-2">
+            <div className="bg-white w-[50%] rounded-[15px] px-4 flex flex-col gap-2 bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative">
               <div className="flex flex-row justify-between my-[12px] ">
                 <div className="text-dark-blue font-medium text-[22px]">
                   Statistics
@@ -404,7 +404,7 @@ const EmployeeDashboard = () => {
           </div>
 
           {/* Leaves Today Section */}
-          <div className="w-[25%] h-[435px] ">
+          <div className="w-[25%] h-[435px] bg-white rounded-[15px] border-4 border-gray-300 transition-all duration-200 hover:shadow-lg hover:bg-gray-50 relative ">
             <Leaves />
           </div>
         </div>

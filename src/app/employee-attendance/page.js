@@ -4,7 +4,7 @@ import Calendar from "../Components/Calendar/Calendar";
 
 const EmployeeAttendance = () => {
   return (
-    <div className="p-4 flex flex-col gap-4">
+    <div className="p-4 flex flex-col gap-4 ml-12">
       {/* heading */}
       <div className="flex flex-col gap-[2px]">
         <div className="text-dark-blue text-[20px] font-semibold">
@@ -135,7 +135,7 @@ const EmployeeAttendance = () => {
         <div className="text-[#121f47] font-medium text-[20px]">
           Monthly Attendance
         </div>
-        <div className="w-full">
+        <div className="w-full ">
           <Calendar />
         </div>
       </div>

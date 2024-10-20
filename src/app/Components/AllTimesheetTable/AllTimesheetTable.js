@@ -83,7 +83,7 @@ const AllTimesheetTable = ({ timesheetData, handleSorting, statusColor }) => {
               let bgClr = clr[1].borderClr;
               let txtClr = clr[1].txtClr;
             //   console.log("Clr: ",clr)
-            //   console.log("bg Clr: ",clr[1].borderClr);
+              // console.log("bg Clr: ",clr[1].borderClr);
             
               return(
 
